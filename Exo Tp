@@ -1,0 +1,15 @@
+-- exo 1 : entité : fournisseur et type piece, relation : commercialiser, table : commercialiser
+SELECT distinct reference_type_piece FROM commercialiser 
+
+-- exo 2 : entité : piece et type piece, relation : caractériser , table : piece
+SELECT reference_type_piece FROM piece WHERE reference_piece = 212
+
+-- exo 3 : entité : , relation :  , table : 
+select distinct commande.raison_sociale from commande,ligne_commande where commande.reference_commande = ligne_commande.reference_commande and ligne_commande.reference_type_piece = 'HD934'
+
+Voir si c'est les trucs commander ou pas
+
+-- exo 4 : entité : fournisseur et type piece, relation : commercialiser  , table : commercialiser
+SELECT raison_sociale,count(reference_type_piece) FROM commercialiser group by raison_sociale
+
+
